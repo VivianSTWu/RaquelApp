@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #F59E00;
+    --bg-color: #EEEEEE;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu-bar {
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 5rem;
+    padding-top: 3rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu-items {
+    display: inline;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.icon {
+    display : none;
+}
+
+.box-raquel {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px 10px 10px;
+    padding-top: 10px;
+}
+
+.raquel-img {
+    display: inline-block;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    background-image: url(../img/raquel-v1.png);
+  }
+
+.raquel-msg {
+    display: inline-block;
+    background-color: #FFF;
+    flex-grow: 1;
+    height: 9rem;
+    margin: 10px 0px 10px 20px;
+    border-radius: 5px;
+}
+
+.quote-box {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100px;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.quote-text {
+    grid-column-start: 2;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.nav-tiles {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap ;
+}
+
+.tile {
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 2px 3px 8px #848484;
+}
+
+.tile-text {
+    display: block;
+    margin-top: 20%;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .box-menu {
+        display: flex;
+        align-items: flex-end;
+        height: 100vh;
+        position: fixed;
+    }
+
+    .menu-bar {
+        height: 2rem;
+        padding: 2.5rem 0 2.5rem 0;
+    }
+
+    .menu {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .icon{
+        display : block;
+    }
+
+    .menu-items{
+        display:none;
+    }
+
+    .box-raquel {
+        padding-top: 30px;
+    }
+
+    .raquel-img {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .raquel-msg {
+        height: 18vw;
+    }
+
+    .nav-tiles {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap ;
+    }
+
+    .tile {
+        height: 25vw;
+        width: 25vw;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        border: none;
+        box-shadow: 2px 3px 8px #848484;
+    }
+
+    .tile-text {
+        display: block;
+        margin-top: 20%;
+        font-size: 16px;
+    }
+}
