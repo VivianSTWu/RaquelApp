@@ -1,5 +1,6 @@
 :root {
     --primary-color: #F59E00;
+    --secondary-color: #00a89c;
     --bg-color: #EEEEEE;
 }
 
@@ -7,12 +8,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lexend', sans-serif;
 }
 
 body {
     background-color: var(--bg-color);
 }
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
 
 .container {
     width: 90%;
@@ -25,7 +32,7 @@ body {
     height: 5rem;
     padding-top: 3rem;
     padding-right: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
 }
 
 .menu {
@@ -42,11 +49,17 @@ body {
     display: inline;
     padding: 10px;
     text-decoration: none;
+    font-size: 15px;
     color: #FFFFFF;
 }
 
 .icon {
-    display : none;
+    display: none;
+}
+
+.raquel-quote {
+    display: flex;
+    justify-content: space-between;
 }
 
 .box-raquel {
@@ -61,50 +74,113 @@ body {
     width: 9rem;
     height: 9rem;
     border-radius: 50%;
-  
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
     background-image: url(../img/raquel-v1.png);
-  }
+
+    margin-right: 20px;
+}
 
 .raquel-msg {
     display: inline-block;
     background-color: #FFF;
-    flex-grow: 1;
     height: 9rem;
-    margin: 10px 0px 10px 20px;
+    width: 45vw;
+    margin: 10px 0px 10px 0px;
     border-radius: 5px;
+    padding: 10px;
+}
+
+.raquel-text {
+    margin-top: 3px;
+}
+
+.greeting {
+    color: var(--primary-color);
+}
+
+.quote-box-index {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100px;
+    padding: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .quote-box {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
     height: 100px;
     padding: 20px 0;
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .quote-text {
     grid-column-start: 2;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #00a89c;
+    margin-left: auto;
+}
+
+.quote-author {
+    grid-column-start: 2;
+    margin-left: auto;
+    margin-right: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+
+.title-box {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height:100px;
+    width: 100%;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title-icon {
+    margin: auto 20px auto auto;
+    color: #FFF;
+}
+
+.title-text {
+    margin: auto auto auto 20px;
+    color: #FFF;
+    font-size: 50px;
+}
+
+.description-box {
+    width: 80%;
+}
+
+.description {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .nav-tiles {
     display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap ;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .tile {
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     border-radius: 5px;
     background-color: #FFFFFF;
     border: none;
     box-shadow: 2px 3px 8px #848484;
+    margin: 18px;
 }
 
 .tile-text {
@@ -113,31 +189,95 @@ body {
     font-size: 16px;
 }
 
+.tile-text-2l {
+    display: block;
+    margin-top: 10%;
+    font-size: 16px;
+}
 
-@media only screen and (max-width: 700px) {
+.tile:hover {
+    -xpedu-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.tile:hover>i {
+    color: var(--primary-color);
+    transition: 0.2s;
+}
+
+.tile:active {
+    background-color: var(--primary-color);
+    color: #FFF;
+    transition: 0.2s;
+}
+
+.tile:active>i {
+    color: #FFF;
+    transition: 0.2s;
+}
+
+
+.menu-items-footer {
+    text-decoration: none;
+    font-size: 13px;
+    color: #FFFFFF;
+    list-style-type: none;
+}
+
+footer {
+    position: absolute;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    /*height: 4rem;            /* Footer height */
+    background-color: var(--secondary-color);
+}
+
+
+@media only screen and (max-width: 900px) {
+
     .box-menu {
         display: flex;
         align-items: flex-end;
         height: 100vh;
         position: fixed;
+        z-index: 1;
     }
 
     .menu-bar {
+        display: flex;
+        align-items: center;
+        justify-content: ;
         height: 2rem;
         padding: 2.5rem 0 2.5rem 0;
+        z-index: 10;
     }
 
     .menu {
+        display: flex;
+        width: 100vw;
         justify-content: space-around;
-        align-items: center;
     }
 
-    .icon{
-        display : block;
+    .icon {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        z-index: 10;
+        cursor: pointer;
     }
 
-    .menu-items{
-        display:none;
+    .menu-items {
+        display: none;
+    }
+
+    .raquel-quote {
+        display: block;
     }
 
     .box-raquel {
@@ -151,26 +291,86 @@ body {
 
     .raquel-msg {
         height: 18vw;
+        flex-grow: 1;
+    }
+
+    .raquel-text {
+        margin-top: 0;
+        font-size: 2.5vw;
+    }
+
+    .quote-box {
+        display: none;
+    }
+
+    .quote-text {
+        grid-column-start: 2;
+        font-size: 20px;
+        color: #00a89c;
+        margin-left: auto;
+    }
+
+    .title-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-box {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        width: 85%;
+        height:15vw;
+        background-color: var(--primary-color);
+    }
+
+    .title-icon {
+        margin: auto;
+        color: #FFF;
+    }
+
+    .title-text {
+        margin: auto;
+        color: #FFF;
+        font-size: 7vw;
+    }
+
+    .description {
+        margin-top: 0;
+        font-size: 13px;
     }
 
     .nav-tiles {
         display: flex;
-        justify-content: space-between;
-        flex-flow: row wrap ;
+        justify-content: start;
+        flex-flow: row wrap;
+        z-index: 10;
+        position: relative;
     }
 
     .tile {
-        height: 25vw;
-        width: 25vw;
+        height: 23vw;
+        width: 23vw;
         border-radius: 5px;
         background-color: #FFFFFF;
         border: none;
         box-shadow: 2px 3px 8px #848484;
+        margin: 2vw;
+        margin-top: 10px;
     }
 
     .tile-text {
         display: block;
         margin-top: 20%;
-        font-size: 16px;
+        font-size: 3vw;
+    }
+
+    .tile-text-2l {
+        display: block;
+        margin-top: 10%;
+        font-size: 3vw;
+    }
+
+    footer {
+        display: none;
     }
 }
