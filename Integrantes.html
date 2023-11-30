@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integrantes</title>
     <script src="https://kit.fontawesome.com/00327c95bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style-integrantes.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@1,300;1,400;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style-integrantes.css">
 </head>
 
 <body>
@@ -27,8 +27,8 @@
                                         class="fa-solid fa-notes-medical fa-2x" style="color: #ffffff;"></i></button>
                             </form>
                         </li>
-                        <li><a href="Integrantes.html" class="menu-items">Integrantes</a>
-                            <form action=""><button class="icon" type="submit"><i class="fa-solid fa-people-group fa-2x" style="color: #ffffff;"></i></button>
+                        <li><a href="integrantes.html" class="menu-items">Integrantes</a>
+                            <form action="integrantes.html"><button class="icon" type="submit"><i class="fa-solid fa-people-group fa-2x" style="color: #ffffff;"></i></button>
                             </form>
                         </li>
                         <li><a href="perfil.html" class="menu-items">Perfil</a>
@@ -39,7 +39,6 @@
                 </nav>
             </div>
         </header>
-
         <main class="container">
             <div class="raquel-quote">
                 <div class="box-raquel">
@@ -63,26 +62,30 @@
                         class="title-text">Integrantes</span></div>
             </div>
 
+            <div class="container">
+                <p class="description container">Clique nas fotos para ver nossas informações!</p>
+            </div>
+
             <div class="integrantes-box container">
                 <div class="infos">
-                    <div class="joji-img"></div>
-                    <div class="infos-text">
+                    <button type="button" onclick="toggleJoji()" class="joji-img"></button>
+                    <div class="infos-text-j" style="display: none;" id="infos-Joji">
                         <p>RM553791 </p>
                         <p><strong>Jhonatan S Ferreira</strong></p>
                         <p>jhonatan.sampaiof@gmail.com</p>
                     </div>
                 </div>
                 <div class="infos">
-                    <div class="levi-img"></div>
-                    <div class="infos-text">
-                        <p>RM553580</p>
+                    <button type="button" onclick="toggleLevi()" class="levi-img"></button>
+                    <div class="infos-text-l" style="display: none;" id="infos-Levi">
+                        <p>RM553791 </p>
                         <p><strong>Levi Yuki Utima</strong></p>
-                        <p>jhonatan.sampaiof@gmail.com</p>
+                        <p>levi.utima@gmail.com</p>
                     </div>
                 </div>
                 <div class="infos">
-                    <div class="vivian-img"></div>
-                    <div class="infos-text">
+                    <button type="button" onclick="toggleVivian()" class="vivian-img"></button>
+                    <div class="infos-text-v" style="display: none;" id="infos-Vivian">
                         <p>RM553169</p>
                         <p><strong>Vivian Sy Ting Wu</strong></p>
                         <p>vivian.stwu@gmail.com</p>
@@ -104,6 +107,6 @@
             </footer>
         </div>
     </div>
+    <script src="./js/script.js"></script>
 </body>
-
 </html>

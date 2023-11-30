@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     width: 100%;
-    margin: 20px;
+    margin: 10px;
 }
 
 .joji-img {
@@ -22,7 +22,7 @@
     background-position: center center;
     background-size: cover;
 
-    background-image: url(../img/raquel-v1.png);
+    background-image: url(../img/jhonatan.png);
 
     margin-left: auto;
 }
@@ -37,7 +37,7 @@
     background-position: center center;
     background-size: cover;
 
-    background-image: url(../img/raquel-v1.png);
+    background-image: url(../img/levi.png);
 
     margin-left: auto;
 }
@@ -52,11 +52,56 @@
     background-position: center center;
     background-size: cover;
 
-    background-image: url(../img/raquel-v1.png);
+    background-image: url(../img/vivian.png);
 
     margin-left: auto;
 }
 
-.infos-text {
-    margin: auto auto auto 20px;
+.infos-text-j {
+    margin: auto auto auto 10px;
+}
+
+.infos-text-l {
+    margin: auto auto auto 10px;
+}
+
+.infos-text-v {
+    margin: auto auto auto 10px;
+}
+
+    
+@media (max-width: 600px) {
+    .joji-img {
+        width: 20vw;
+        height: 20vw;
+        z-index: 10;
+        border: none;
+    }
+
+    .levi-img {
+        width: 20vw;
+        height: 20vw;
+        z-index: 10;
+        border: none;
+    }
+
+    .vivian-img {
+        width: 20vw;
+        height: 20vw;
+        z-index: 10;
+        border: none;
+    }
+
+    .infos-text-j {
+        font-size: 2vw;
+    }
+    
+    .infos-text-l {
+        font-size: 2vw;
+    }
+    
+    .infos-text-v {
+        font-size: 2vw;
+    }
+    
 }
