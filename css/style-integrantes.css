@@ -1,0 +1,62 @@
+.integrantes-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    margin: 20px;
+}
+
+.joji-img {
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    background-image: url(../img/raquel-v1.png);
+
+    margin-left: auto;
+}
+
+.levi-img {
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    background-image: url(../img/raquel-v1.png);
+
+    margin-left: auto;
+}
+
+.vivian-img {
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    background-image: url(../img/raquel-v1.png);
+
+    margin-left: auto;
+}
+
+.infos-text {
+    margin: auto auto auto 20px;
+}
