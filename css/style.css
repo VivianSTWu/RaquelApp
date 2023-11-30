@@ -27,12 +27,24 @@ body {
 }
 
 .menu-bar {
+    display: flex;
     background-color: var(--primary-color);
     width: 100vw;
     height: 5rem;
     padding-top: 3rem;
     padding-right: 1.5rem;
     padding-bottom: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    margin-left: 35px;
+}
+
+.logo {
+    width: 30%;
+    height: auto;
 }
 
 .menu {
@@ -102,6 +114,11 @@ body {
     color: var(--primary-color);
 }
 
+.highlight {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
 .quote-box-index {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -158,9 +175,9 @@ body {
     font-size: 50px;
 }
 
-.description-box {
+/*.description-box {
     width: 80%;
-}
+}*/
 
 .description {
     margin-top: 20px;
@@ -173,6 +190,15 @@ body {
     flex-wrap: wrap;
 }
 
+.record-box {
+    display: flex;
+}
+
+.fields {
+    font-weight: 600;
+    text-align: left;
+}
+
 .tile {
     height: 130px;
     width: 130px;
@@ -181,6 +207,21 @@ body {
     border: none;
     box-shadow: 2px 3px 8px #848484;
     margin: 18px;
+}
+
+.tile-record {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    width: 80vw;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 2px 3px 8px #848484;
+    margin: 10px;
+    text-align: start;
+    padding: 10px;
+    line-height: 150%;
 }
 
 .tile-text {
@@ -227,6 +268,10 @@ body {
     list-style-type: none;
 }
 
+.footer {
+    padding-top: 150px;
+}
+
 footer {
     position: absolute;
     padding: 10px;
@@ -250,10 +295,13 @@ footer {
     .menu-bar {
         display: flex;
         align-items: center;
-        justify-content: ;
         height: 2rem;
         padding: 2.5rem 0 2.5rem 0;
         z-index: 10;
+    }
+
+    .logo-box {
+        display: none;
     }
 
     .menu {
@@ -347,6 +395,11 @@ footer {
         position: relative;
     }
 
+    .record-tiles {
+        z-index: 10;
+        position: relative;
+    }
+
     .tile {
         height: 23vw;
         width: 23vw;
@@ -356,6 +409,21 @@ footer {
         box-shadow: 2px 3px 8px #848484;
         margin: 2vw;
         margin-top: 10px;
+    }
+
+    .tile-record {
+        height: 13vw;
+        width: 100%;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        border: none;
+        box-shadow: 2px 3px 8px #848484;
+        margin: 1.5vw;
+        line-height: normal;
+    }
+
+    .tile-record-text {
+        font-size: 2vw;
     }
 
     .tile-text {
